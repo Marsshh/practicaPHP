@@ -12,7 +12,7 @@
         $age = 40;
         $birthdate = new DateTime();
         $birthdate->setDate(1983, 5, 12);
-        $tlfnumber = array(65434566,933332211);
+            $tlfnumber = array(65434566,933332211);
         $address = 'Carrer de turin, 15';
         $email = 'kurt.cagle@example.com';
         $treballa = true;
