@@ -6,56 +6,82 @@
     <title>Document</title>
 </head>
 <body>
-
-<h1>Llista de cursos</h1>
-
-
-
-<?php
-$contador = 0;
-$cursos = array(
-    array("ID" => 1, "NOM" => "PHP", "DESC" => "Introducció a PHP", "PREU" => 15.5),
-    array("ID" => 2, "NOM" => "Laravel", "DESC" => "Laravel per experts", "PREU" => 30),
-    array("ID" => 3, "NOM" => "Django", "DESC" => "Dominant Django", "PREU" => 10)
-);
-foreach ($cursos as $curso) {
-    if (isset($curso["ID"])) {
-        $contador++;
-    }
-}
-echo "<h2>El número de cursos apuntats:  $contador</h2>";
-?>
-
-
     <?php 
-
-      define('IVA', 0.21);
-       
-      $cursos = array(
-       array("ID" => 1, "NOM" => "PHP", "DESC" => "Introducció a PHP", "PREU" => 15.5),
-       array("ID" => 2, "NOM" => "Laravel", "DESC" => "Laravel per experts", "PREU" => 30),
-       array("ID" => 3, "NOM" => "Django", "DESC" => "Dominant Django", "PREU" => 10)
-   );
-   foreach ($cursos as $curs){
-    echo "<div style='border:1px solid black; padding:10px; margin:10px'>";
-    echo "<h3>" . $curs["NOM"] . "</h3><br>";
-    echo "<p>" . $curs["DESC"] ."</p><br>";
-    echo "<p>" ."El preu del llibre amb IVA: " . ($curs["PREU"]+($curs["PREU"]*IVA)) . "</p><br>";
-    echo "</div>\n";
- }
- 
-
- 
- 
- 
-
-
-
-
-
-
-
-
+        $name = 'Kurt';
+        $surname = 'Cagle';
+        $age = 40;
+        $birthdate = new DateTime();
+        $birthdate->setDate(1983, 5, 12);
+        $tlfnumber = array(65434566,933332211);
+            $tlfnumber = array(65434566,933332211);
+        $address = 'Carrer de turin, 15';
+        $email = 'kurt.cagle@example.com';
+        $treballa = true;
+        $heigth = 1.67;
+        
+    
     ?>
+    <h1>
+        <?php 
+        echo "Descrivint a $name";
+        ?>
+    </h1>
+    
+    <h2>
+        <?php 
+        echo "Les dades de $name son:";
+        ?>
+    </h2>
+        <ul>
+         <li>
+                <?php 
+                 echo "Es diu: $name";
+                ?>
+         </li>
+         <li>
+                <?php 
+                 echo "Te $age anys";
+                ?>
+         </li>
+         <li>
+                 <?php 
+                echo "Va neixer l'any:" ;
+                ?>
+                <strong>
+                 <?php 
+                 echo date_format($birthdate, 'Y-m-d');
+                ?>
+                </strong>
+         </li>
+         <li>
+                <?php 
+                 echo "Els seus telèfons són: $tlfnumber[0] - $tlfnumber[1]  ";
+                
+                ?>
+         </li>
+         <li>
+                <?php 
+                 echo "Viu a: $address ";
+                ?>
+         </li>
+         <li>
+                <?php 
+                 echo "El seu email és: $email ";
+                ?>
+         </li>
+         <li>
+         <?php 
+                 echo "Treballa:" 
+                 ?>
+                <?php 
+                 echo  $treballa ? 'Si' : 'No';
+                ?>
+         </li>
+         <li>
+                <?php 
+                 echo "I medeix: $heigth";
+                ?>
+         </li>
+        </ul>
 </body>
 </html>
